@@ -1,0 +1,87 @@
+/* styles.css */
+
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Color de fondo suave */
+    color: #343a40; /* Color de texto */
+}
+
+/* Estilo del navbar */
+.navbar {
+    background: linear-gradient(90deg, #007bff, #00c6ff); /* Gradiente azul */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important; /* Color blanco para el texto */
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Color amarillo al pasar el mouse */
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Estilo de los encabezados */
+h1 {
+    color: #007bff; /* Color azul */
+    margin-top: 20px;
+    text-align: center; /* Centrar el texto */
+    font-size: 2.5em; /* Tamaño de fuente más grande */
+}
+
+/* Estilo de los párrafos */
+p {
+    font-size: 1.1em;
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilo de las listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e9ecef; /* Color de fondo claro */
+    margin: 5px 0;
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background 0.3s; /* Transición suave */
+}
+
+ul li:hover {
+    background: #d1e7dd; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo del contenedor */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo de botones */
+.btn-custom {
+    background-color: #28a745; /* Color verde */
+    color: #ffffff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    transition: background 0.3s; /* Transición suave */
+}
+
+.btn-custom:hover {
+    background-color: #218838; /* Color verde más oscuro al pasar el mouse */
+}
+
+/* Estilo de secciones */
+.section {
+    padding: 40px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar el texto */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradiente cálido */
+    color: #ffffff; /* Texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px 0; /* Margen superior e inferior */
+}
