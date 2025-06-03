@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ValoresController {
 
-    @GetMapping("/values")
-    public String values(Model model) {
-        return "values"; // nombre de la vista
+    @GetMapping("/valores")
+    public String valores(Model model) {
+        return "valores"; // nombre de la vista
     }
 }

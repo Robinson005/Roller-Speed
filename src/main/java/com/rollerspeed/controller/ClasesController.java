@@ -6,9 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class ClasesController {
-
-    @GetMapping("/classes")
-    public String classes(Model model) {
-        return "classes"; // nombre de la vista
+    @GetMapping("/clases")
+    public String clases(Model model) {
+       return "clases"; // nombre de la vista
     }
 }

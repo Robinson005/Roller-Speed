@@ -6,9 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class InstructorController {
-
     @GetMapping("/instructor")
     public String instructor(Model model) {
-        return "instructor"; // nombre de la vista
+       return "instructor"; // nombre de la vista
     }
 }

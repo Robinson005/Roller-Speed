@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ProgramaciónClases {
 
-    @GetMapping("/class-schedule")
-    public String classSchedule(Model model) {
-        return "class_schedule"; // nombre de la vista
+    @GetMapping("/programacion_clases")
+    public String programacionClases(Model model) {
+        return "programacion_clases"; // nombre de la vista
     }
 }

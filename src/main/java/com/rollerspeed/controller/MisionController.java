@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MisionController {
 
-    @GetMapping("/mission")
-    public String mission(Model model) {
-        return "mission"; // nombre de la vista
+    @GetMapping("/mision")
+    public String mision(Model model) {
+        return "mision"; // nombre de la vista
     }
 }

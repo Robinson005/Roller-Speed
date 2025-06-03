@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ListarEstudiantesController {
 
-    @GetMapping("/list-students")
-    public String listStudents(Model model) {
-        return "list_students"; // nombre de la vista
+    @GetMapping("/listar_estudiantes")
+    public String listarEstudiantes(Model model) {
+        return "listar_estudiantes"; // nombre de la vista
     }
 }

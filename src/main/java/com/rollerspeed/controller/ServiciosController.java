@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ServiciosController {
 
-    @GetMapping("/services")
-    public String services(Model model) {
-        return "services"; // nombre de la vista
+    @GetMapping("/servicios")
+    public String servicios(Model model) {
+        return "servicios"; // nombre de la vista
     }
 }
