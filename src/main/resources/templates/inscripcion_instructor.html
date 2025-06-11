@@ -20,10 +20,11 @@
         </div>
     </nav>
     <h1>Inscripción de Instructores</h1>
-    <form>
-        <!-- Formulario de inscripción de instructores -->
-        <input type="text" placeholder="Nombre" required>
-        <input type="email" placeholder="Correo" required>
+    <form action="inscripcion_instructor" method="post">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo" required>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+        <input type="text" name="especialidad" placeholder="Especialidad" required>
         <button type="submit">Inscribir</button>
     </form>
 </body>

@@ -1,5 +1,8 @@
 package com.rollerspeed.controller;
 
+import com.rollerspeed.model.Instructor;
+import com.rollerspeed.repository.InstructorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,23 +11,34 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class InscripcionInstructorController {
-    @GetMapping("/inscripcion_instructor")
+
+    @Autowired
+    private InstructorRepository instructorRepository;
+
+    @GetMapping("inscripcion_instructor")
     public String inscripcionInstructor(Model model) {
-        return "inscripcion_instructor"; // nombre de la vista
+        return "inscripcion_instructor";
     }
 
-    @PostMapping("/submit-inscripcion-instructor")
+    @PostMapping("inscripcion_instructor")
     public String procesarInscripcionInstructor(
         @RequestParam("nombre") String nombre,
-        @RequestParam("email") String email,
+        @RequestParam("correo") String correo,
         @RequestParam("telefono") String telefono,
         @RequestParam("especialidad") String especialidad,
         Model model) {
-    
-    // Lógica para guardar el instructor en la base de datos
-    // instructorRepository.save(new Instructor(nombre, email, telefono, especialidad));
-    
-        return "inscripcion_instructor_confirmacion"; // Redirigir a la vista de confirmación
-    }
 
+        Instructor instructor = new Instructor();
+        instructor.setNombre(nombre);
+        instructor.setCorreo(correo);
+        instructor.setTelefono(telefono);
+        instructor.setEspecialidad(especialidad);
+
+        instructorRepository.save(instructor);
+
+        model.addAttribute("nombre", nombre);
+        model.addAttribute("especialidad", especialidad);
+
+        return "inscripcion_instructor_confirmacion";
+    }
 }

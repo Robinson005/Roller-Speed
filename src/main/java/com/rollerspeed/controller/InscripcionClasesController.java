@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class InscripcionClasesController {
 
     // Muestra el formulario de inscripción
-    @GetMapping("/inscripcion-clases")
+    @GetMapping("inscripcion_clases")
     public String mostrarFormularioInscripcion(Model model) {
         return "inscripcion_clases"; // nombre de la vista
     }
 
     // Procesa la inscripción
-    @PostMapping("/submit-inscripcion")
+    @PostMapping("inscripcion_clases")
     public String procesarInscripcion(
             @RequestParam("nombre") String nombre,
             @RequestParam("email") String email,

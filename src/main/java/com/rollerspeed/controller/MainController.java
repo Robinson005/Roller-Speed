@@ -12,31 +12,31 @@
             return "index"; // nombre de la vista
         }
 
-        @GetMapping("/mision")
+        @GetMapping("mision")
         public String mision(Model model) {
             return "mision"; // nombre de la vista
         }
 
-        @GetMapping("/vision")
+        @GetMapping("vision")
         public String vision(Model model) {
             return "vision"; // nombre de la vista
         }
 
-        @GetMapping("/valores")
+        @GetMapping("valores")
         public String valores(Model model) {
             return "valores"; // nombre de la vista
         }
 
-        @GetMapping("/servicios")
+        @GetMapping("servicios")
         public String servicios(Model model) {
             return "servicios"; // nombre de la vista
         }
 
-        @GetMapping("/eventos")
+        @GetMapping("eventos")
         public String eventos(Model model) {
             return "eventos"; // nombre de la vista
         }
-        @GetMapping("/clases")
+        @GetMapping("clases")
         public String clases(Model model) {
             return "clases"; // nombre de la vista
         }

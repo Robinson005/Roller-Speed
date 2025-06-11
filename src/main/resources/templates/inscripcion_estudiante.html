@@ -5,7 +5,8 @@
     <title>Inscripción de Estudiantes - Roller Speed</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body><nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Roller Speed</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,11 +20,12 @@
         </div>
     </nav>
     <h1>Inscripción de Estudiantes</h1>
-    <form>
-        <!-- Formulario de inscripción de estudiantes -->
-        <input type="text" placeholder="Nombre" required>
-        <input type="date" placeholder="Fecha de Nacimiento" required>
-        <input type="text" placeholder="Género" required>
+    <form action="inscripcion_estudiante" method="post">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo" required>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+        <input type="text" name="clase" placeholder="Clase" required>
+        <input type="text" name="comentarios" placeholder="Comentarios">
         <button type="submit">Inscribir</button>
     </form>
 </body>

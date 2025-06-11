@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Instructor - Roller Speed</title>
@@ -19,7 +19,26 @@
             </div>
         </div>
     </nav>
-    <h1>Instructor</h1>
+    <h1>Instructores</h1>
     <p>Información sobre los instructores de la escuela.</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Especialidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="instructor : ${instructores}">
+                <td th:text="${instructor.nombre}"></td>
+                <td th:text="${instructor.email}"></td>
+                <td th:text="${instructor.telefono}"></td>
+                <td th:text="${instructor.especialidad}"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

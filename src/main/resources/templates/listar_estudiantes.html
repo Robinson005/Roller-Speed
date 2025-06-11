@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Listar Estudiantes - Roller Speed</title>
@@ -21,5 +21,24 @@
     </nav>
     <h1>Listar Estudiantes</h1>
     <p>Lista de todos los estudiantes registrados.</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Clase</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="estudiante : ${estudiantes}">
+                <td th:text="${estudiante.nombre}"></td>
+                <td th:text="${estudiante.email}"></td>
+                <td th:text="${estudiante.telefono}"></td>
+                <td th:text="${estudiante.clase}"></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

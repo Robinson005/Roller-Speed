@@ -85,3 +85,81 @@ ul li:hover {
     border-radius: 10px; /* Bordes redondeados */
     margin: 20px 0; /* Margen superior e inferior */
 }
+
+/* Estilos para pestañas (Tabs) personalizados */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #007bff;
+    margin-bottom: 1.5rem;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 12px 24px;
+    margin-right: 8px;
+    color: #007bff;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.tab:hover,
+.tab:focus {
+    background-color: #e0e7ff; /* Color muy suave azul */
+    outline: none;
+}
+
+.tab[aria-selected="true"],
+.tab.active {
+    background-color: #007bff; /* Azul fuerte para pestaña activa */
+    color: #ffffff;
+    border-color: #007bff;
+    box-shadow: 0 -4px 6px rgba(0, 123, 255, 0.4);
+    cursor: default;
+}
+
+/* Contenedor del contenido de la pestaña */
+.tab-content {
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 0 8px 8px 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-height: 150px;
+}
+
+/* Responsive para las pestañas en móviles */
+@media (max-width: 767px) {
+    .tabs {
+        flex-direction: column;
+        border-bottom: none;
+        border-right: 2px solid #007bff;
+        min-width: 150px;
+    }
+    .tab {
+        margin: 0 0 8px 0;
+        border-radius: 8px 0 0 8px;
+        border-bottom: 2px solid #007bff;
+        border-right: none;
+    }
+    .tab[aria-selected="true"],
+    .tab.active {
+        box-shadow: -4px 0 6px rgba(0, 123, 255, 0.4);
+    }
+    .tab-content {
+        border-radius: 8px;
+        margin-top: 16px;
+        min-height: 200px;
+    }
+}
+
+/* Accesibilidad: foco visible */
+.tab:focus-visible {
+    outline: 3px solid #ffbf47; /* Amarillo para foco visible */
+    outline-offset: 2px;
+}
+
