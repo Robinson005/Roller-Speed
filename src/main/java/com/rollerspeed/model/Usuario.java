@@ -11,7 +11,7 @@ public class Usuario {
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
     private String nombre;
-    private String email;
+    private String correo;
     private String telefono;
     private String contraseña; // Asegúrate de encriptar esta información
 
